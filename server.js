@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 dotenv.config();
 // console.log(PORT);
 
-mongoose.connect(process.env.DATABASE_ACCESS, () => console.log("Connected"));
+mongoose.connect(process.env.DATABASE_ACCESS || process.env.MONGOURI, () => console.log("Connected"));
 
 require("./models/user");
 require("./models/post");

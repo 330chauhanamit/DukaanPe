@@ -341,18 +341,9 @@ input[value="Post"]{
   margin: 0 auto;
   flex-direction: column;
 }
-.img-capt{
-
-}
-
-
-
-
 input[Delete]{
   text-decoration: none;
   border: none;
-}
-input[Buy Now]{
 }
 
 #del{
@@ -372,9 +363,7 @@ input[Buy Now]{
   font-weight: bold;
   color: red;
 }
-.Post-des{
 
-}
 
 @media only screen and (max-width: 775px) {
   .Login-container{
