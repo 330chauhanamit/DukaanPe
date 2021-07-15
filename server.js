@@ -5,6 +5,8 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 8000;
+const {MONGOURI} = require('./config/keys')
+
 
 app.use(
   bodyParser.urlencoded({
@@ -16,7 +18,13 @@ app.use(bodyParser.json());
 dotenv.config();
 // console.log(PORT);
 
-mongoose.connect(process.env.DATABASE_ACCESS || process.env.MONGOURI, () => console.log("Connected"));
+mongoose.connect(MONGOURI,{
+    useNewUrlParser:true,
+    useUnifiedTopology: true
+    
+
+})
+// mongoose.connect(process.env.DATABASE_ACCESS || process.env.MONGOURI, () => console.log("Connected"));
 
 require("./models/user");
 require("./models/post");
