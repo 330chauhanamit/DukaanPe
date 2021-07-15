@@ -22,7 +22,10 @@ mongoose.connect(MONGOURI,{
     useNewUrlParser:true,
     useUnifiedTopology: true
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 53e7e1730aea9b940f560a77e3b5163ff7edbfab
 })
 // mongoose.connect(process.env.DATABASE_ACCESS || process.env.MONGOURI, () => console.log("Connected"));
 
